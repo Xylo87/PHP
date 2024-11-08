@@ -11,15 +11,9 @@ Ecrire un algorithme permettant de savoir si une phrase est palindrome.
 $phrase = "engagelejeuquejelegagne";
 $phraseMinus = mb_strtolower($phrase);
 
-if strrev($phraseMinus) === $phrase {
+if (strrev($phraseMinus) === $phrase) {
     echo "La phrase est un palindrome";
 }
 else {
     echo "La phrase n'est pas un palindrome";
 }
-
-
-
-// echo $phraseMinus."<br>";
-
-// echo strrev($phraseMinus);
