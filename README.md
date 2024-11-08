@@ -1,1 +1,1 @@
-PHP Training
+PHP training
