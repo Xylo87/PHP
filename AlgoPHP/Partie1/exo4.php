@@ -4,7 +4,7 @@
 Ecrire un algorithme permettant de savoir si une phrase est palindrome.
 </p>
 
-<h2></h2>
+<h2>La phrase est un palindrome</h2>
 
 <?php
 
