@@ -5,11 +5,7 @@ A partir de la phrase de l’exercice 1, écrire l’instruction permettant de r
 « aujourd’hui » par le mot « demain ». Afficher l’ancienne et la nouvelle phrase.
 </p>
 
-<h2>
-    Ancienne : « Notre formation DL commence aujourd'hui. »
-    <br>
-    Nouvelle : « Notre formation DL commence demain. »
-</h2>
+<h2>Résultat</h2>
 
 <?php
 

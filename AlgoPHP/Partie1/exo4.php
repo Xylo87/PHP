@@ -4,16 +4,21 @@
 Ecrire un algorithme permettant de savoir si une phrase est palindrome.
 </p>
 
-<h2>La phrase est un palindrome</h2>
+<h2>Résultat</h2>
 
 <?php
 
-$phrase = "engagelejeuquejelegagne";
-$phraseMinus = mb_strtolower($phrase);
+$phrase = "Engage le jeu que je le gagne";
 
-if (strrev($phraseMinus) === $phrase) {
-    echo "La phrase est un palindrome";
+$phraseMinus = strtolower($phrase);
+$phraseReverse = strrev($phraseMinus);
+$phraseSpace = str_replace(" ", "", $phraseReverse);
+$phraseMaj = ucfirst($phraseSpace);
+$phraseFinal = substr($phraseMaj, 0, 6)." ".substr($phraseMaj, 6, 2)." ".substr($phraseMaj, 8, 3)." ".substr($phraseMaj, 11, 3)." ".substr($phraseMaj, 14, 2)." ".substr($phraseMaj, 16, 2)." ".substr($phraseMaj, 18, 5);
+
+if ($phraseFinal === $phrase) {
+    echo "La phrase « Engage le jeu que je le gagne » est un palindrome.";
 }
 else {
-    echo "La phrase n'est pas un palindrome";
+    echo "La phrase n'est pas un palindrome.";
 }

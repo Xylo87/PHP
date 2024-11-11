@@ -6,7 +6,7 @@ Ecrire un algorithme permettant de compter le nombre de caractères contenus dan
 (espaces inclus).
 </p>
 
-<h2>La phrase contient 39 caractères.</h2>
+<h2>Résultat</h2>
 
 <?php
 
