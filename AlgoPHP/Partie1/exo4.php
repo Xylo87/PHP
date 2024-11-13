@@ -15,20 +15,20 @@ $phraseSpace = str_replace(" ", "", $phraseMinus);
 $phraseReverse = strrev($phraseSpace);
 
 // => Suite de l'algorithme avec la phrase de l'énoncé
-// $phraseMaj = ucfirst($phraseReverse);
-// $phraseFinal = substr($phraseMaj, 0, 6)." ".substr($phraseMaj, 6, 2)." ".substr($phraseMaj, 8, 3)." ".substr($phraseMaj, 11, 3)." ".substr($phraseMaj, 14, 2)." ".substr($phraseMaj, 16, 2)." ".substr($phraseMaj, 18, 5);
+$phraseMaj = ucfirst($phraseReverse);
+$phraseFinal = substr($phraseMaj, 0, 6)." ".substr($phraseMaj, 6, 2)." ".substr($phraseMaj, 8, 3)." ".substr($phraseMaj, 11, 3)." ".substr($phraseMaj, 14, 2)." ".substr($phraseMaj, 16, 2)." ".substr($phraseMaj, 18, 5);
 
-if ($phraseSpace === $phraseReverse) {
-    echo "La phrase est un palindrome.";
-}
-else {
-    echo "La phrase n'est pas un palindrome.";
-}
-
-// => Condition avec la phrase de l'énoncé
-// if ($phraseFinal === $phrase) {
-//     echo "La phrase « Engage le jeu que je le gagne » est un palindrome.";
+// if ($phraseSpace === $phraseReverse) {
+//     echo "La phrase est un palindrome.";
 // }
 // else {
-//     echo "La phrase « Engage le jeu que je le gagne » n'est pas un palindrome.";
+//     echo "La phrase n'est pas un palindrome.";
 // }
+
+// => Condition avec la phrase de l'énoncé
+if ($phraseFinal === $phrase) {
+    echo "La phrase \"".$phrase."\" est un palindrome.";
+}
+else {
+    echo "La phrase \"".$phrase."\" n'est pas un palindrome.";
+}

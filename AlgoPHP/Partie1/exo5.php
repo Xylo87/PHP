@@ -13,4 +13,4 @@ $francs = 100;
 $euros = round($francs / 6.55957, 2);
 
 echo "Montant en francs : ".$francs."<br>".
-"100 francs = ".$euros."€";
+$francs." francs = ".$euros."€";
