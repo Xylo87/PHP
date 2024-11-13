@@ -222,6 +222,7 @@ foreach($formateurs as $prenom => $ville) {
 
 
 $clients = [
+    // (clé pas pertinante)
     "stephane" => [
         "adresse" => "10 rue de la Gare",
         "cp" => "67000",
