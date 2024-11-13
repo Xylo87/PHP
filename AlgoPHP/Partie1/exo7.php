@@ -13,7 +13,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 
 <?php
 
-$age = 9;
+$age = 10;
 
 // if(gettype($age) === "integer" || gettype($age) === "double") {
 //     if($age < 18 && $age >= 12) {
