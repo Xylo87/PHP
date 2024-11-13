@@ -13,7 +13,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 
 <?php
 
-// $age = 10;
+$age = 9;
 
 // if(gettype($age) === "integer" || gettype($age) === "double") {
 //     if($age < 18 && $age >= 12) {
@@ -23,7 +23,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 //         $category = "Minime";
 //         echo "L'enfant qui a $age ans appartient à la catégorie \"$category\".";
 //     } elseif($age <= 9 && $age >= 8) {
-//         $category = "Junior";
+//         $category = "Pupille";
 //         echo "L'enfant qui a $age ans appartient à la catégorie \"$category\".";
 //     } elseif($age <= 7 && $age >= 6) {
 //         $category = "Poussin";
@@ -39,12 +39,12 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 // ===> Switch Case
 if(gettype($age) === "integer" || gettype($age) === "double" ) {
     switch (true) {
-        case $age < 18 && $age >= 12: echo "L'enfant qui a $age ans appartient à la catégorie \"Cadet\""; break;
-        case $age <= 11 && $age >= 10: echo "L'enfant qui a $age ans appartient à la catégorie \"Minime\""; break;
-        case $age <= 9 && $age >= 8: echo "L'enfant qui a $age ans appartient à la catégorie \"Junior\""; break;
-        case $age <= 7 && $age >= 6: echo "L'enfant qui a $age ans appartient à la catégorie \"Poussin\""; break;
+        case $age < 18 && $age >= 12: echo "L'enfant qui a $age ans appartient à la catégorie \"Cadet\"."; break;
+        case $age <= 11 && $age >= 10: echo "L'enfant qui a $age ans appartient à la catégorie \"Minime\"."; break;
+        case $age <= 9 && $age >= 8: echo "L'enfant qui a $age ans appartient à la catégorie \"Pupille\"."; break;
+        case $age <= 7 && $age >= 6: echo "L'enfant qui a $age ans appartient à la catégorie \"Poussin\"."; break;
         default: echo "La catégorie n'est pas gérée.";
     }    
 } else {
-    echo "Veuillez saisir un âge numérique !";
+    echo "Veuillez entrer une valeur numérique.";
 }
