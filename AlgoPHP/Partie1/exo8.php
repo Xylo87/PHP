@@ -12,18 +12,18 @@ Remarque : proposer 2 solutions avec 2 types de boucles.
 
 $nombre = 8;
 
-echo "Table de 8 (boucle FOR) :<br><br>";
+echo "Table de $nombre (boucle FOR) :<br><br>";
 
 for ($i = 1; $i <=10 ; $i++) { 
-    echo $i." x "."8 = ".$i * $nombre."<br>";
+    echo $i." x "."$nombre = ".$i * $nombre."<br>";
 }
 
 echo "<br><br><br><br>";
 
-echo "Table de 8 (boucle WHILE) :<br><br>";
+echo "Table de $nombre (boucle WHILE) :<br><br>";
 
 $j = 1;
 while ($j <= 10) {
-    echo $j." x "."8 = ".$j * $nombre."<br>";
+    echo $j." x "."$nombre = ".$j * $nombre."<br>";
     $j++;
 }
