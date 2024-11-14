@@ -20,17 +20,17 @@ $personnes = [
     "Marie-Claire" => "ENG"
 ];
 
-parcourir le tableau / switch / 
+ksort($personnes);
 
-
-echo $personnes["Virgile"];
-
-switch ($variable) {
-    case 'value':
-        # code...
-        break;
-    
-    default:
-        # code...
-        break;
+function salutations(array $personnes) {
+    foreach ($personnes as $prenom => $langue) {
+        switch ($langue) {
+            case 'FRA': echo "Bonjour $prenom<br>"; break;
+            case "ESP": echo "Hola $prenom<br>"; break;
+            case "ENG": echo "Hello $prenom<br>"; break;
+        }
+    }
+    return "Bonjour $prenom";
 }
+
+salutations ($personnes);
