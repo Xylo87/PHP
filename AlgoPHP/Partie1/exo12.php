@@ -22,15 +22,18 @@ $personnes = [
 
 ksort($personnes);
 
-function salutations(array $personnes) {
-    foreach ($personnes as $prenom => $langue) {
+function salutations(array $tableau) : string {
+    $ret = "";
+    foreach ($tableau as $prenom => $langue) {
         switch ($langue) {
-            case 'FRA': echo "Bonjour $prenom<br>"; break;
-            case "ESP": echo "Hola $prenom<br>"; break;
-            case "ENG": echo "Hello $prenom<br>"; break;
+            case "FRA": $ret .= "Bonjour $prenom <br>" ; break;
+            case "ESP": $ret .= "Hola $prenom <br>" ; break;
+            case "ENG": $ret .= "Hello $prenom <br>" ; break;
         }
     }
-    return "Bonjour $prenom";
+    return $ret;
 }
 
-salutations ($personnes);
+echo salutations($personnes);
+
+
