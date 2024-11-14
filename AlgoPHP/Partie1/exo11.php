@@ -15,5 +15,5 @@ $brands = ["Peugeot","Renault", "BMW", "Mercedes"];
 echo "Il y a ".count($brands)." marques de voitures dans le tableau :<br>";
 
 foreach ($brands as $brand) {
-    echo "<li>".$brand."<br>";
+    echo "<li>".$brand."<br></li>";
 }
