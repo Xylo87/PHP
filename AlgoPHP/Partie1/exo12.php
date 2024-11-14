@@ -15,7 +15,22 @@ Variante : trier d’abord le tableau par ordre alphabétique du prénom
 <?php
 
 $personnes = [
-    "Salut" => "Mickaël",
-    "Hola" => "Virgile",
-    "Hello" => "Marie-Claire",
+    "Mickaël" => "FRA",
+    "Virgile" => "ESP",
+    "Marie-Claire" => "ENG"
 ];
+
+parcourir le tableau / switch / 
+
+
+echo $personnes["Virgile"];
+
+switch ($variable) {
+    case 'value':
+        # code...
+        break;
+    
+    default:
+        # code...
+        break;
+}
