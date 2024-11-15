@@ -7,12 +7,20 @@ caractère passée en argument en majuscules et en rouge.
 
 <h2>Résultat</h2>
 
+<style>
+    .red {
+        color: red;
+    }
+</style>
+
 <?php
 
-function  convertirMajRouge(string $texte) : string {
-    $texteMaj = mb_strtoupper($texte);
-    // $texteMajRouge = textcolorallocate($texteMaj, 255, 0, 0);
-    return $texteMaj;
+$texte = "mon texte en paramètre";
+
+function convertirMajRouge(string $phrase) : string {
+    $phraseMaj = mb_strtoupper($phrase);
+    $phraseMajRouge = "<span class='red'>$phraseMaj</span>";
+    return $phraseMajRouge;
 }
 
-echo convertirMajRouge("Mon texte en paramètre");
+echo convertirMajRouge($texte);
