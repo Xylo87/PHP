@@ -320,3 +320,14 @@ function repeterMot(string $mot, int $nbRepetitions, string $separateur) {
 echo str_repeat("Bidule", 10);
 
 
+
+// FONCTION COULEUR TEXTE DYNAMIQUE
+
+$texte = "Hello";
+
+function convertirCouleur(string $phrase, $color) : string {
+    $phraseColor = "<span style='color: $color'>$phrase</span>";
+    return $phraseColor;
+}
+
+echo convertirCouleur($texte, 'blue');
