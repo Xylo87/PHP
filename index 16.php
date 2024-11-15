@@ -331,3 +331,4 @@ function convertirCouleur(string $phrase, $color) : string {
 }
 
 echo convertirCouleur($texte, 'blue');
+// couleur hexadécimale possible 
