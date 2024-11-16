@@ -19,7 +19,7 @@ $texte = "mon texte en paramètre";
 
 function convertirMajRouge(string $phrase) : string {
     $phraseMaj = mb_strtoupper($phrase);
-    $phraseMajRouge = "<span class='red'>$phraseMaj</span>";
+    $phraseMajRouge = "<span class=\"red\">$phraseMaj</span>";
     return $phraseMajRouge;
 }
 

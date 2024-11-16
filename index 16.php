@@ -326,9 +326,9 @@ echo str_repeat("Bidule", 10);
 $texte = "Hello";
 
 function convertirCouleur(string $phrase, $color) : string {
-    $phraseColor = "<span style='color: $color'>$phrase</span>";
+    $phraseColor = "<span style=\"color: $color\">$phrase</span>";
     return $phraseColor;
 }
 
-echo convertirCouleur($texte, 'blue');
+echo convertirCouleur($texte, "blue");
 // couleur hexadécimale possible 
