@@ -1,4 +1,4 @@
-<h1>Exercice 1</h1>
+<h1>Exercice 3</h1>
 
 <p>
 Créer une fonction personnalisée convertirMajRouge() permettant de transformer une chaîne de 
