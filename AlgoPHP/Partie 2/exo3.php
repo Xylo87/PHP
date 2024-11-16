@@ -9,4 +9,4 @@ caractère passée en argument en majuscules et en rouge.
 
 <?php
 
-echo "<a href=https://elan-formation.fr/accueil target='_blank'>Elan Formation</a>";
+echo "<a href=\"https://elan-formation.fr/accueil\" target=\"_blank\">Elan Formation</a>";
