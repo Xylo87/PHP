@@ -15,7 +15,7 @@ caractère passée en argument en majuscules et en rouge.
 
 <?php
 
-$texte = "mon texte en paramètre";
+$texte = "Mon texte en paramètre";
 
 function convertirMajRouge(string $phrase) : string {
     $phraseMaj = mb_strtoupper($phrase);

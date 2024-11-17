@@ -1,12 +1,12 @@
-<h1>Exercice 2</h1>
+<h1>Exercice 4</h1>
 
 <p>
-Soit le tableau suivant :
-$capitales = [France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington","Italie"=>"Rome"];
-Réaliser un algorithme permettant d’afficher le tableau HTML suivant (notez que le nom du pays 
-s’affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à 
-une fonction personnalisée.
-Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
+A partir de l’exercice 2, ajouter une colonne supplémentaire dans le tableau HTML qui contiendra le lien hypertexte de la page Wikipédia de la capitale 
+(le lien hypertexte devra s’ouvrir dans un nouvel onglet et le tableau sera trié par ordre alphabétique de la capitale).
+On admet que l’URL de la page Wikipédia de la capitale adopte la forme : https://fr.wikipedia.org/wiki/
+Le tableau passé en argument sera le suivant :
+$capitales = ["France"=>"Paris","Allemagne"=>"Berlin",
+"USA"=>"Washington","Italie"=>"Rome","Espagne"=>"Madrid"];
 </p>
 
 <h2>Résultat</h2>
@@ -21,8 +21,8 @@ $capitales = [
     "Espagne" => "Madrid"
 ];
 
-function afficherTableHTML(array $capitales) : string {
-    asort($capitales);
+function afficherTableHTML(array $tableau) : string {
+    asort($tableau);
     $result = "<table border>
                 <thead>
                     <tr>
@@ -31,7 +31,7 @@ function afficherTableHTML(array $capitales) : string {
                         <th>Lien wiki</th>
                     </tr>
                 </thead>";
-    foreach ($capitales as $pays => $ville) {
+    foreach ($tableau as $pays => $ville) {
     $result .= "<tbody>
                     <tr>
                         <td>".strtoupper($pays)."</td>

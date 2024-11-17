@@ -20,8 +20,8 @@ $capitales = [
     "Italie" => "Rome"
 ];
 
-function afficherTableHTML(array $capitales) : string {
-    ksort($capitales);
+function afficherTableHTML(array $tableau) : string {
+    ksort($tableau);
     $result = "<table border>
                 <thead>
                     <tr>
@@ -29,7 +29,7 @@ function afficherTableHTML(array $capitales) : string {
                         <th>Capitales</th>
                     </tr>
                 </thead>";
-    foreach ($capitales as $pays => $ville) {
+    foreach ($tableau as $pays => $ville) {
     $result .= "<tbody>
                     <tr>
                         <td>".strtoupper($pays)."</td>
