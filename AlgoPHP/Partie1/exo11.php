@@ -12,8 +12,10 @@ Exemple : tableau ➔ « Peugeot », « Renault », « BMW », « Mercedes »
 
 $brands = ["Peugeot","Renault", "BMW", "Mercedes"];
 
-echo "Il y a ".count($brands)." marques de voitures dans le tableau :<br>";
+echo "Il y a ".count($brands)." marques de voitures dans le tableau :<ul>";
 
 foreach ($brands as $brand) {
     echo "<li>".$brand."<br></li>";
 }
+
+echo "</ul>";

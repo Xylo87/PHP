@@ -43,20 +43,29 @@ Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
 $capitales = [
     "France" => "Paris",
     "Allemagne" => "Berlin",
-    "USA" => "Washington",
+    "Usa" => "Washington",
     "Italie" => "Rome"
 ];
 
 ksort($capitales);
 
-// foreach ($capitales as $pays => $ville) {
-//     echo strtoupper($pays)." pays dont la capitale est $ville<br>";
-// }
-
-function afficherTableHTML(array $tableau) {
+function afficherTableHTML(array $tableau) : string {
+    $result = "<table border>
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Capitales</th>
+                    </tr>
+                </thead>";
     foreach ($tableau as $pays => $ville) {
-    echo strtoupper($pays)." pays dont la capitale est $ville<br>";
-    }
+    $result .="<tbody>
+                <tr>
+                    <td>".strtoupper($pays)."</td>
+                    <td>$ville</td>
+                </tr>";
+    } $result .= "</tbody>
+    </table>";
+    return $result;
 }
 
 echo afficherTableHTML($capitales);
