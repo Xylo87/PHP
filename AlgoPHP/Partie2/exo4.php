@@ -17,16 +17,18 @@ $capitales = [
     "France" => "Paris",
     "Allemagne" => "Berlin",
     "Usa" => "Washington",
-    "Italie" => "Rome"
+    "Italie" => "Rome",
+    "Espagne" => "Madrid"
 ];
 
 function afficherTableHTML(array $capitales) : string {
-    ksort($capitales);
+    asort($capitales);
     $result = "<table border>
                 <thead>
                     <tr>
                         <th>Pays</th>
                         <th>Capitales</th>
+                        <th>Lien wiki</th>
                     </tr>
                 </thead>";
     foreach ($capitales as $pays => $ville) {
@@ -34,6 +36,7 @@ function afficherTableHTML(array $capitales) : string {
                     <tr>
                         <td>".strtoupper($pays)."</td>
                         <td>$ville</td>
+                        <td><a href=\"https://fr.wikipedia.org/wiki/$ville\" target=\"_blank\">Lien</td>
                     </tr>";
     } $result .= "</tbody>
     </table>";
