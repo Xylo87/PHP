@@ -24,10 +24,10 @@ function genererCheckbox(array $tableau) : string {
     
     foreach ($tableau as $choix => $tf) {
         if ($tf === true) {
-            $textdisplay .= "<input type=\"checkbox\" name=\"$choix\" checked>
-                                <label for=\"\">$choix</label><br>";
-        } else $textdisplay .= "<input type=\"checkbox\" name=\"$choix\">
-                                    <label for=\"\">$choix</label><br>";           
+            $textdisplay .= "<input type=\"checkbox\" name=\"$choix\" id=\"cb\" checked>
+                                <label for=\"cb\">$choix</label><br>";
+        } else $textdisplay .= "<input type=\"checkbox\" name=\"$choix\" id=\"cb\">
+                                    <label for=\"cb\">$choix</label><br>";           
     }
     
     $textdisplay .= "</fieldset>";

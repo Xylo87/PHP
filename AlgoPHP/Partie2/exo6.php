@@ -18,8 +18,8 @@ function afficherListeDeroulante(array $tableau) : string {
     $i=0;
 
     $textdisplay = "<form action=\"\">
-                        <label for=\"\"></label><br>
-                            <select name=\"\" id=\"\"><br>";
+                        <label for=\"select\"></label><br>
+                            <select name=\"select\" id=\"select\"><br>";
     
     foreach ($tableau as $form) {
         $i++;

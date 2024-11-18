@@ -17,8 +17,8 @@ function afficherInput(array $tableau) : string {
     $textdisplay = "<form action=\"\">";
     
     foreach ($tableau as $form) {
-        $textdisplay .= "<label for=\"\">$form</label><br>
-                            <textarea name=\"\" id=\"\" cols=\"25\" rows=\"1\"></textarea><br>";
+        $textdisplay .= "<label for=\"text\">$form</label><br>
+                            <textarea name=\"text\" id=\"text\" cols=\"25\" rows=\"1\"></textarea><br>";
     } 
     $textdisplay .= "</form>";
     return $textdisplay;

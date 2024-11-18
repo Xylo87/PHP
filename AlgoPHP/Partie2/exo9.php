@@ -23,10 +23,10 @@ function afficherRadio(array $tableau) : string {
     
     foreach ($tableau as $sexe => $valeur) {
         if ($sexe === "Autre") {
-            $textdisplay .= "<input type=\"radio\" name=\"groupe\" checked>
-                                <label for=\"\">$sexe</label><br>";
-        } else $textdisplay .= "<input type=\"radio\" name=\"groupe\">
-                                    <label for=\"\">$sexe</label><br>";           
+            $textdisplay .= "<input type=\"radio\" name=\"groupe\" id=\"radio\" checked>
+                                <label for=\"radio\">$sexe</label><br>";
+        } else $textdisplay .= "<input type=\"radio\" name=\"groupe\" id=\"radio\">
+                                    <label for=\"radio\">$sexe</label><br>";           
     }
     
     $textdisplay .= "</fieldset>";
