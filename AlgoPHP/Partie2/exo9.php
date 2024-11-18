@@ -26,7 +26,7 @@ function afficherRadio(array $tableau) : string {
             $textdisplay .= "<input type=\"radio\" name=\"$sexe\" checked>
                                 <label for=\"\">$sexe</label><br>";
         } else $textdisplay .= "<input type=\"radio\" name=\"$sexe\">
-                            <label for=\"\">$sexe</label><br>";           
+                                    <label for=\"\">$sexe</label><br>";           
     }
     
     $textdisplay .= "</fieldset>";
