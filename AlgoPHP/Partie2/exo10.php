@@ -33,7 +33,7 @@ function afficherRadio(array $tableau) : string {
     $textdisplay = "<fieldset>";
     
     foreach ($tableau as $job) {
-        $textdisplay .= "<input type=\"radio\" name=\"$job\">
+        $textdisplay .= "<input type=\"radio\" name=\"groupe\">
                             <label for=\"\">$job</label><br>";           
     }
     

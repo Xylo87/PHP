@@ -23,9 +23,9 @@ function afficherRadio(array $tableau) : string {
     
     foreach ($tableau as $sexe => $valeur) {
         if ($sexe === "Autre") {
-            $textdisplay .= "<input type=\"radio\" name=\"$sexe\" checked>
+            $textdisplay .= "<input type=\"radio\" name=\"groupe\" checked>
                                 <label for=\"\">$sexe</label><br>";
-        } else $textdisplay .= "<input type=\"radio\" name=\"$sexe\">
+        } else $textdisplay .= "<input type=\"radio\" name=\"groupe\">
                                     <label for=\"\">$sexe</label><br>";           
     }
     
