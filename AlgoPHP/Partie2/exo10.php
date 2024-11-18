@@ -1,7 +1,9 @@
 <h1>Exercice 10</h1>
 
 <p>
-En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire complet qui contient les informations suivantes : champs de texte avec nom, prénom, adresse e-mail, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation : « Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».
+En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire complet qui contient les informations suivantes : 
+    champs de texte avec nom, prénom, adresse e-mail, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation : 
+        « Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».
 Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement de validation (submit).
 </p>
 
@@ -30,11 +32,14 @@ $nomsRadio = ["Développeur Logiciel", "Designer web", "Intégrateur", "Chef de 
 
 function afficherRadio(array $tableau) : string {
 
+    $i = 0;
+
     $textdisplay = "<fieldset>";
     
     foreach ($tableau as $job) {
-        $textdisplay .= "<input type=\"radio\" name=\"groupe\">
-                            <label for=\"\">$job</label><br>";           
+        $i++;
+        $textdisplay .= "<input type=\"radio\" id=\"\" name=\"groupe\" value=\"$i\">
+                            <label for=\"\">$job</label><br>";         
     }
     
     $textdisplay .= "</fieldset>";
