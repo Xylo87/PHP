@@ -65,11 +65,13 @@
 
 // Contruct permet de faire des opérations initiales et de sauvegarder des opérations au niveau de l'instance
 
-// $this-> fait référence à l'objet créé dans l'instance
+// $this-> fait référence à l'objet créé dans l'instance > uniquement visible dans la classe
 
 // private = accessible qu'au sein du fichier de la classe > par défautl, variables sont en privé
 // > pour qu'attribut soit accessible > l'insérer dans une fonction publique (appelée "Getter")
 // > possible de déclarer une fonction en privé si on l'appelle dans une fonction en public par ex. > n'a d'utilité que dans la classe
 
+// Construct = obligatoire
+// Attributs = variables / Construct = valeurs
 
 ?>
