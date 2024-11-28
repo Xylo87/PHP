@@ -71,13 +71,13 @@ class Entreprise {
     }
 
     public function getInfos(){
-        return $this->getRaisonSociale()." a été créé le ".$this->getDateCreation()->format("d.m.Y")." et se situe à l'adresse ".
+        return $this." a été créé le ".$this->getDateCreation()->format("d.m.Y")." et se situe à l'adresse ".
         $this->getAdresseComplete();
     }
 
     public function __toString()
     {
-        return $this->_raisonSociale." (".$this->_dateCreation->format("Y").")";
+        return $this->_raisonSociale;
     }
 
 }

@@ -14,7 +14,20 @@ echo $elanFormation;
 // ---> fonctionne grâce à toString
 
 echo "<br>";
+echo "<br>";
+echo "<br>";
 
 echo $elanFormation->getInfos();
+// ---> retourne l'objet grâce à toString + le contenu de la fonction getInfos
+
+
+$isimorn = new Employe("CRINON", "François", "isimorn@gmail.com");
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+echo $isimorn;
+
 
 ?>
