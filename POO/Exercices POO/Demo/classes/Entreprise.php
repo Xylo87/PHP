@@ -8,6 +8,7 @@ class Entreprise {
     private string $_adresse;
     private string $_codePostal;
     private string $_ville;
+    private array $_employes;
 
     public function __construct(string $raisonSociale, string $dateCreation, string $adresse, string $codePostal, string $ville)
     {
@@ -16,6 +17,7 @@ class Entreprise {
         $this->_adresse = $adresse;
         $this->_codePostal = $codePostal;
         $this->_ville = $ville;
+        $this->_employes = [];
     }
 
     public function getRaisonSociale() : string
@@ -73,6 +75,32 @@ class Entreprise {
     public function getInfos(){
         return $this." a été créé le ".$this->getDateCreation()->format("d.m.Y")." et se situe à l'adresse ".
         $this->getAdresseComplete();
+    }
+
+    public function get_employes()
+    {
+        return $this->_employes;
+    }
+
+    public function set_employes($_employes)
+    {
+        $this->_employes = $_employes;
+
+        return $this;
+    }
+
+    public function addEmploye($_employe) {
+        $this->_employes[] = $_employe;
+    }
+
+    public function afficherEmployes() {
+        $result = "<h2>Employés de $this </h2>";
+        
+        foreach($this->_employes as $employe) {
+            $result .= "<li>$employe</li>";
+        }
+        $result .= "</ul>";
+        return $result;
     }
 
     public function __toString()

@@ -74,4 +74,12 @@
 // Construct = obligatoire
 // Attributs = variables / Construct = valeurs
 
+// associer un objet entier en tant qu'attribut de classe (ex. exo Livre, auteur = objet entier)
+// clé étrangère correspond à une imbrication d'un objet en tant qu'attribut de classe
+
+// singulier/pluriel
+
+// entité de type table associative > possibilité loger des éléments dans l'association elle-même 
+// (ex. nb de commandes/panier (parmi id produits et id commandes), élément variable) 
+
 ?>
