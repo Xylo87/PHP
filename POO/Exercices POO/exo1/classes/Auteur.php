@@ -87,10 +87,11 @@ public function afficherBibliographie() {
     $result = "<h2> Livres de $this </h2>";
 
     foreach ($this->livres as $livre) {
-        $result .= $livre."<br>";
+        $result .= $livre." (".$livre->getDateParutionAnnee().") : ".$livre->getNbPages()." pages / "
+        .$livre->getPrix()."€ <br>";
     }
     return $result;
-}
+    }
 
 
 
