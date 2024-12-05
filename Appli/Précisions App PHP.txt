@@ -1,0 +1,11 @@
+-- comprendre l'utilisation de $_GET
+
+-- te concentrer sur les fonctionnalités qu'on demande d'implémenter dans la dernière partie (quantité, supprimer un produit, vider le panier) avec le switch..case
+- Il sera important que toutes les actions qu'on déclenchera soient gérés par des liens <a> .
+- Les href de tous ces liens commenceront forcément par "traitement.php?action=xxxx (où xxx est un des "cases" du switch dans traitement.php).
+- Pour certaines actions, on aura besoin de faire passer un id puisqu'on s'intéressera à un produit en particulier. 
+C'est valable pour : + suppression d'un produit
++ baisser / augmenter la quantité d'un produit
+Les href admettront donc un argument en plus : traitement.php?action=delete&id=xxx (où "xxx" est l'id du produit). 
+
+-- on verra le front et les messages plus tard 
