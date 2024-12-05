@@ -150,8 +150,12 @@ public function __construct(string $libelle, float $soldeInitial, string $devise
         Nouveau solde : ".$this->soldeInitial." ".$this->devise;
     }
 
+    // VIREMENT
+
     public function virement(Compte $compteCible, float $montant) {
         $this->debit($montant); // on débite le compte "source"
+        echo "<br>";
+        echo "<br>";
         $compteCible->credit($montant); // on crédite le compte "cible"
     }
 }

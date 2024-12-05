@@ -41,10 +41,10 @@ echo $fortuneo->debit(2);
 
 echo "<br>";
 echo "<br>";
+echo "<br>";
+echo "<br>";
 
 echo $hsbc->virement($societeGenerale, 1000);
-
-
 
 
 
