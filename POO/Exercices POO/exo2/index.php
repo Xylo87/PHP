@@ -34,14 +34,15 @@ echo "<br>";
 
 echo $fortuneo->credit(5);
 
-echo $fortuneo->credit(5);
+echo "<br>";
+echo "<br>";
+
+echo $fortuneo->debit(2);
 
 echo "<br>";
 echo "<br>";
 
-echo $fortuneo->debit(1);
-
-echo $fortuneo->debit(1);
+echo $hsbc->virement($societeGenerale, 1000);
 
 
 

@@ -114,27 +114,44 @@ public function __construct(string $libelle, float $soldeInitial, string $devise
 
 
 
-    public function credit($montant) {
-        $result = "<h2>Crédit du compte bancaire appartenant à : $this->titulaire</h2>
-        <ul><li>Libellé : ".$this->getLibelle().
-        "</li><li>Nouveau solde : ".$this->setSoldeInitial($this->getSoldeInitial() + $montant).$this->getSoldeInitial().
-        "</li><li>Devise : ".$this->getDevise();
-        return $result
-        ."</ul>";
-    }    
+    // public function credit(float $montant) {
+    //     $result = "<h2>Crédit du compte bancaire appartenant à : $this->titulaire</h2>
+    //     <ul><li>Libellé : ".$this->getLibelle().
+    //     "</li><li>Nouveau solde : ".$this->setSoldeInitial($this->getSoldeInitial() + $montant).$this->getSoldeInitial().
+    //     "</li><li>Devise : ".$this->getDevise();
+    //     return $result
+    //     ."</ul>";
+    // }    
 
-    public function debit($montant) {
-        $result = "<h2>Débit du compte bancaire appartenant à : $this->titulaire</h2>
-        <ul><li>Libellé : ".$this->getLibelle().
-        "</li><li>Nouveau solde : ".$this->setSoldeInitial($this->getSoldeInitial() - $montant).$this->getSoldeInitial().
-        "</li><li>Devise : ".$this->getDevise();
-        return $result
-        ."</ul>";
+    // public function debit(float $montant) {
+    //     $result = "<h2>Débit du compte bancaire appartenant à : $this->titulaire</h2>
+    //     <ul><li>Libellé : ".$this->getLibelle().
+    //     "</li><li>Nouveau solde : ".$this->setSoldeInitial($this->getSoldeInitial() - $montant).$this->getSoldeInitial().
+    //     "</li><li>Devise : ".$this->getDevise();
+    //     return $result
+    //     ."</ul>";
+    // }
+
+
+
+    // CRÉDIT SIMPLIFIÉ
+
+    public function credit(float $montant) {
+        $this->soldeInitial += $montant;
+        echo "Le compte ".$this->libelle." de ".$this->titulaire." a bien été credité de $montant ".$this->devise."<br>
+        Nouveau solde : ".$this->soldeInitial." ".$this->devise;
     }
 
+    // DÉBIT SIMPLIFIÉ
 
+    public function debit(float $montant) {
+        $this->soldeInitial -= $montant;
+        echo "Le compte ".$this->libelle." de ".$this->titulaire." a bien été débité de $montant ".$this->devise."<br>
+        Nouveau solde : ".$this->soldeInitial." ".$this->devise;
+    }
 
-//     public function virement($montant) {
-//         $result = 
-//     }
+    public function virement(Compte $compteCible, float $montant) {
+        $this->debit($montant); // on débite le compte "source"
+        $compteCible->credit($montant); // on crédite le compte "cible"
+    }
 }
