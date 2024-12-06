@@ -28,21 +28,33 @@ if (isset($_GET["action"])) {
         
         break;
 
-        case "delete": unset($_SESSION["products"][$_GET["id"]]);
+        case "delete": if (isset($_GET["id"]) && isset($_SESSION["products"][$_GET["id"]])) {
+            unset($_SESSION["products"][$_GET["id"]]);
         header("Location: recap.php"); exit;
         break;
+        } 
         
         case "clear": unset($_SESSION["products"]);
         header("Location: recap.php"); exit;
         break;
         
-        case "up-qtt": $_SESSION["products"][$_GET["id"]]["qtt"]++;
-        header("Location: recap.php"); exit;
-        break;
+        case "down-qtt": if (isset($_GET["id"]) && isset($_SESSION["products"][$_GET["id"]])) {
+            if ($_SESSION["products"][$_GET["id"]]["qtt"] < 2)  {
+                unset($_SESSION["products"][$_GET["id"]]);
+                header("Location: recap.php"); exit;
+                break;
+            } else {
+                $_SESSION["products"][$_GET["id"]]["qtt"]--;
+                header("Location: recap.php"); exit;
+                break;
+            }
+        }
         
-        case "down-qtt": $_SESSION["products"][$_GET["id"]]["qtt"]--;
+        case "up-qtt": if (isset($_GET["id"]) && isset($_SESSION["products"][$_GET["id"]])) {
+            $_SESSION["products"][$_GET["id"]]["qtt"]++;
         header("Location: recap.php"); exit;
         break;
+        }
     }
 }  
 
