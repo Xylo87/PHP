@@ -41,6 +41,7 @@
                     "<td>".number_format($product["price"], 2, ",", "&nbsp;")."&nbsp;€</td>",
                     "<td>".$product["qtt"]."</td>",
                     "<td>".number_format($product["total"], 2, ",", "&nbsp;")."&nbsp;€</td>",
+                    "<td><a href=\"traitement.php?action=delete&id=$index\">Supprimer un produit</a></td>",
                 "</tr>";
             $totalGeneral += $product["total"];
             $totalProducts += $product["qtt"];
@@ -49,7 +50,16 @@
                 "<td>Nombres de produits : ".$totalProducts,
                 "<td colspan=3>Total général : </td>",
                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
-            "</tr>";
+            "</tr>",
+            "<tr>",
+                "<td><a href=\"traitement.php?action=clear\">Vider le panier</a></td>",
+            "</tr>",
+            // "<tr>",
+            //     "<td><a href=\"traitement.php?action=up-qtt&id=\">Augmenter la quantité</a></td>",
+            // "</tr>",
+            // "<tr>",
+            //     "<td><a href=\"traitement.php?action=down-qtte&id=\">Baisser la quantité</a></td>",
+            // "</tr>",
             "</tbody>";
     }
     ?>

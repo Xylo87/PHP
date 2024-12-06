@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    var_dump($_SESSION["products"][1]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +11,13 @@
     <title>Ajout produit</title>
 </head>
 <body>
-    <p>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <br>
-        <a href="recap.php">Voir votre panier</a>
-    </p>
+    <?php
+    echo "<p>",
+        "<i class=\"fa-solid fa-cart-shopping\"></i>",
+        "<br>",
+        "<a href=\"recap.php\">Voir votre panier</a>",
+    "</p>";
+    ?>
     <h1>Ajouter un produit</h1>
     <form action="traitement.php" method="post">
         <p>

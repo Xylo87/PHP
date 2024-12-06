@@ -20,4 +20,25 @@ if(isset($_POST["submit"])) {
     }
 }
 
+
+
+if (isset($_GET["action"])) {
+    switch ($_GET["action"]) {
+        case "add": 
+        
+        case "delete": unset($_SESSION["products"][$_GET["id"]]);
+        header("Location: recap.php"); exit;
+        break;
+        
+        case "clear": unset($_SESSION["products"]);
+        header("Location: recap.php"); exit;
+        break;
+        
+        case "up-qtt":
+        case "down-qtt":
+    }
+}  
+
+
+
 header("Location:index.php");
