@@ -45,6 +45,7 @@ if (isset($_GET["action"])) {
                 break;
             } else {
                 $_SESSION["products"][$_GET["id"]]["qtt"]--;
+                $_SESSION["products"][$_GET["id"]]["total"] = $_SESSION["products"][$_GET["id"]]["qtt"] * $_SESSION["products"][$_GET["id"]]["price"];
                 header("Location: recap.php"); exit;
                 break;
             }
@@ -52,6 +53,7 @@ if (isset($_GET["action"])) {
         
         case "up-qtt": if (isset($_GET["id"]) && isset($_SESSION["products"][$_GET["id"]])) {
             $_SESSION["products"][$_GET["id"]]["qtt"]++;
+            $_SESSION["products"][$_GET["id"]]["total"] = $_SESSION["products"][$_GET["id"]]["qtt"] * $_SESSION["products"][$_GET["id"]]["price"];
         header("Location: recap.php"); exit;
         break;
         }
