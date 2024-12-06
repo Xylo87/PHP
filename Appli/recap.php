@@ -41,7 +41,9 @@
                     "<td>".number_format($product["price"], 2, ",", "&nbsp;")."&nbsp;€</td>",
                     "<td>".$product["qtt"]."</td>",
                     "<td>".number_format($product["total"], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                    "<td><a href=\"traitement.php?action=delete&id=$index\">Supprimer un produit</a></td>",
+                    "<td><a href=\"traitement.php?action=up-qtt&id=$index\">Ajouter</a></td>",
+                    "<td><a href=\"traitement.php?action=down-qtt&id=$index\">Réduire</a></td>",
+                    "<td><a href=\"traitement.php?action=delete&id=$index\">Supprimer l'article</a></td>",
                 "</tr>";
             $totalGeneral += $product["total"];
             $totalProducts += $product["qtt"];
@@ -54,12 +56,6 @@
             "<tr>",
                 "<td><a href=\"traitement.php?action=clear\">Vider le panier</a></td>",
             "</tr>",
-            // "<tr>",
-            //     "<td><a href=\"traitement.php?action=up-qtt&id=\">Augmenter la quantité</a></td>",
-            // "</tr>",
-            // "<tr>",
-            //     "<td><a href=\"traitement.php?action=down-qtte&id=\">Baisser la quantité</a></td>",
-            // "</tr>",
             "</tbody>";
     }
     ?>
