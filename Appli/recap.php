@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Recapitulatif des produits</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <p>
@@ -27,6 +28,7 @@
                         "<th>Prix</th>",
                         "<th>Quantité</th>",
                         "<th>Total</th>",
+                        "<th>Actions</th>",
                     "</tr>",
                 "</thead>",
                 "<tbody>";
@@ -39,11 +41,10 @@
                     "<td>".$index."</td>",
                     "<td>".$product["name"]."</td>",
                     "<td>".number_format($product["price"], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                    "<td>".$product["qtt"]."</td>",
+                    "<td><a href=\"traitement.php?action=down-qtt&id=$index\"><i class=\"fa-solid fa-square-minus\"></i></a>".$product["qtt"]
+                    ."<a href=\"traitement.php?action=up-qtt&id=$index\"><i class=\"fa-solid fa-square-plus\"></i></a></td>",
                     "<td>".number_format($product["total"], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                    "<td><a href=\"traitement.php?action=up-qtt&id=$index\">Ajouter</a></td>",
-                    "<td><a href=\"traitement.php?action=down-qtt&id=$index\">Réduire</a></td>",
-                    "<td><a href=\"traitement.php?action=delete&id=$index\">Supprimer l'article</a></td>",
+                    "<td><a href=\"traitement.php?action=delete&id=$index\"><i class=\"fa-solid fa-trash-can\"></i></a></td>",
                 "</tr>";
             $totalGeneral += $product["total"];
             $totalProducts += $product["qtt"];
@@ -54,7 +55,7 @@
                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
             "</tr>",
             "<tr>",
-                "<td><a href=\"traitement.php?action=clear\">Vider le panier</a></td>",
+                "<td class=\"buttonLine\"><a href=\"traitement.php?action=clear\"><button class=\"emptyButton\">Vider le panier</button></a></td>",
             "</tr>",
             "</tbody>";
     }

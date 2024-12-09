@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    border-bottom: solid 1px black;
+    padding: 10px 75px 10px 10px;
+}
+
+td {
+    border-bottom: solid 1px lightgrey;
+    padding: 10px 75px 10px 10px;
+}
+
+.fa-trash-can {
+    padding: 7px 7px;
+    background: rgb(204, 43, 43);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: small;
+}
+
+.emptyButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: rgb(204, 43, 43);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+.buttonLine {
+    border: none;
+}
+
+.fa-shop {
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+
+h1 {
+    margin-left: 30px;
+}
+
+.fa-cart-shopping {
+    margin-left: 25px;
+    margin-bottom : 5px;
+}
+
+p {
+    margin: 30px;
+}
+
+.fillButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background:rgb(48, 138, 25);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+
+
+.fa-square-plus {
+    margin-left: 5px;
+    font-size: x-large;
+    color: rgb(65, 105, 225);
+    text-align: center;
+}
+
+.fa-square-minus {
+    margin-right: 5px;
+    font-size: x-large;
+    color: rgb(65, 105, 225);
+    text-align: center;
+}
