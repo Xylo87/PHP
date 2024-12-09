@@ -23,6 +23,9 @@ if (isset($_GET["action"])) {
                         "total" => $price*$qtt
                     ];
                     $_SESSION["products"][] = $product;
+                //     header("Location:index.php?success=true"); exit;
+                // } else {
+                //     header("Location:index.php?success=false"); exit;
                 }
             }
         

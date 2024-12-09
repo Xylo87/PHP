@@ -1,13 +1,13 @@
 <?php
 
-function getQuantity()  {
-    $quantity = 0;
+function getTotalProducts()  {
+    $totalProducts = 0;
     if (isset($_SESSION["products"])) {
-        foreach ($$_SESSION["products"] as $product) {
-            $quantity += $product["qtt"];
+        foreach ($_SESSION["products"] as $product) {
+            $totalProducts += $product["qtt"];
         }
     }
-    return $quantity;
+    return $totalProducts;
 }
 
-echo getQuantity();
+?>
