@@ -50,7 +50,14 @@
             "<tr>",
                 "<td class=\"buttonLine\"><a href=\"traitement.php?action=clear\"><button class=\"emptyButton\">Vider le panier</button></a></td>",
             "</tr>",
-            "</tbody>";
+        "</tbody>",
+    "</table>";    
+    }
+
+    if (isset($_GET["success"])) {
+        if ($_GET["success"] === "true") {
+            echo "L'article a bien été supprimé !";
+        }
     }
 
     $content = ob_get_clean();

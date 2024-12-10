@@ -43,6 +43,14 @@
     
     <?php
 
+    if (isset($_GET["success"])) {
+        if ($_GET["success"] === "true") {
+            echo "Article bien ajouté au panier !";
+        } else {
+            echo "Une erreur est survenue...";
+        }
+    }
+
     $content = ob_get_clean();
 
     require_once "template.php"; ?>

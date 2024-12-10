@@ -23,9 +23,9 @@ if (isset($_GET["action"])) {
                         "total" => $price*$qtt
                     ];
                     $_SESSION["products"][] = $product;
-                //     header("Location:index.php?success=true"); exit;
-                // } else {
-                //     header("Location:index.php?success=false"); exit;
+                    header("Location:index.php?success=true"); exit;
+                } else {
+                    header("Location:index.php?success=false"); exit;
                 }
             }
         
@@ -33,9 +33,9 @@ if (isset($_GET["action"])) {
 
         case "delete": if (isset($_GET["id"]) && isset($_SESSION["products"][$_GET["id"]])) {
             unset($_SESSION["products"][$_GET["id"]]);
-        header("Location: recap.php"); exit;
+            header("Location:recap.php?success=true"); exit;
+                }
         break;
-        } 
         
         case "clear": unset($_SESSION["products"]);
         header("Location: recap.php"); exit;
