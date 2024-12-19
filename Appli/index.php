@@ -12,9 +12,6 @@
             "<a href=\"recap.php\">Mon panier</a>",
     "</p>";
     
-    // if (isset($_GET["success"])) {
-    //     echo $_GET["success"];
-    // }
     ?>
     <h1>Ajouter un produit</h1>
     <form action="traitement.php?action=add" method="post">
