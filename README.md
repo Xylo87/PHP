@@ -15,8 +15,7 @@ L'un d'entre eux (*PHP\POO\Exercices\POO\exo1*) permet de gérer des relations e
 ---
 
 ## 2. Fonctionnalités 
-1. 
-(*PHP\POO\Exercices\POO\exo1*)
+1. (*PHP\POO\Exercices\POO\exo1*)
 
 - Création d'auteurs avec une gestion de leur bibliographie.
 - Création de livres associés à un auteur.
@@ -87,3 +86,50 @@ echo $livre1; // Les Misérables (1862) écrit par Victor Hugo
 
 ---
 
+## 5. Structure des classes
+
+(*PHP\POO\Exercices\POO\exo1*)
+
+### Classe `Auteur`
+- **Propriétés** :
+  - `nom` : Nom de l'auteur.
+  - `prenom` : Prénom de l'auteur.
+  - `bibliographie` : Liste des livres écrits par l'auteur.
+- **Méthodes** :
+  - `ajouterLivre(Livre $livre): void` : Ajoute un livre à la bibliographie de l'auteur.
+  - `getBibliographie(): array` : Retourne la liste des livres.
+  - `__toString(): string` : Affiche le nom de l'auteur et sa bibliographie.
+
+### Classe `Livre`
+- **Propriétés** :
+  - `titre` : Titre du livre.
+  - `anneePublication` : Année de publication.
+  - `auteur` : Auteur du livre (relation avec la classe Auteur).
+- **Méthodes** :
+  - `__toString(): string` : Affiche les informations du livre (titre, année, auteur).
+
+---
+
+## 6. Conventions de codage respectées
+
+(*PHP\POO\Exercices\POO\exo1*)
+
+- **Encapsulation** : Les propriétés des classes sont privées et accessibles via des méthodes (`getters` et `setters`).
+- **Conventions PSR-12** : Respect des normes de codage PHP pour une meilleure lisibilité.
+- **Méthodes personnalisées** : Les classes sont enrichies avec des méthodes adaptées aux relations entre auteurs et livres.
+
+---
+
+## 7. Améliorations possibles
+
+(*PHP\POO\Exercices\POO\exo1*)
+
+- Implémenter une gestion des erreurs (ex : empêcher la création d’un livre sans auteur).
+- Ajouter une interface utilisateur (console ou web) pour faciliter la gestion des auteurs et des livres.
+- Permettre la persistance des données dans une base de données.
+
+---
+
+## 8. Auteur
+Ce projet a été réalisé par Théo Arbogast (aka Xylo87).  
+N'hésitez pas à ouvrir une issue ou à me contacter pour toute suggestion ou question.
