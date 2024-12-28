@@ -50,6 +50,7 @@ Le formulaire est traité via la **Superglobale** `$_POST`au sein du fichier `tr
    ```
 
 3. Installer un logiciel type "Laragon" pour disposer d'un environnement qui permet d'exécuter un script PHP :
+- Téléchargez Laragon [ici](https://laragon.org/download/)
 - Démarrer Laragon
 - Enregistrer le "Repo" dans le dossier laragon\www\
 - Exécuter la fonction "Web" de Laragon
