@@ -26,8 +26,7 @@ L'un d'entre eux (*PHP\POO\Exercices\POO\exo1*) permet de gérer des relations e
   - **Conventions de nommage PSR-12**
   - **Méthodes adaptées**
 
-2. 
-- Ajout d'un produit via un formulaire **HTML**. 
+2. - Ajout d'un produit via un formulaire **HTML**. 
 Le formulaire est traité via la **Superglobale** `$_POST`au sein du fichier `traitement.php`. Chaque `input` est filtré et le contenu du formulaire donne lieu à un tableau associatif stocké en `$_SESSION`.
 - Le panier récapitule les produits ajoutés en `$_SESSION` et permet d'ajuster les quantités, de supprimer un produit (y compris si la quantité est égale = 0) ou de vider l'ensemble du panier via `$_GET`, qui permet d'agir via un `Switch/Case` sur le tableau associatif.
 - Respect des bonnes pratiques de codage :
